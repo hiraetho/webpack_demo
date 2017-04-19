@@ -3,7 +3,7 @@ var path = require('path');
 
 
 module.exports = {
-    context: __dirname,
+    // context: __dirname,
     // 两个文件打包到一起
     // entry: ['./src/script/main.js', './src/script/a.js'],
     // output: {
@@ -36,8 +36,37 @@ module.exports = {
                 }
             },
             {
+                test: /\.html$/,
+                loader: 'html-loader',
+            },
+            {
+                test: /\.ejs$/,
+                loader: 'ejs-loader',
+            },
+            {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                loaders: [
+                    'style-loader',
+                    'css-loader?importLoader=1',
+                ]
+            },
+            {
+                test: /\.less$/,
+                loaders: [
+                    'style-loader',
+                    'css-loader',
+                    'less-loader'
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/i,
+                loader: 'url-loader',
+                // loader: 'file-loader',
+                // loader: 'image-webpack-loader',   //可以压缩
+                options: {
+                    name: 'assets/[name]-[hash:5].[ext]',
+                    limit: 10240,
+                }
             }
         ]
     },

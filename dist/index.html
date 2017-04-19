@@ -2,52 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--<title>Webpack App</title>-->
+    <!--<title><%= htmlWebpackPlugin.options.title %></title>-->
     <title></title>
 </head>
 <body>
-<!---->
+<img src="data:image/jpeg;base64,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" alt="">   <!--在html直接引用图片的方式-->
+<div id="app">
+</div>
+<!--<%= htmlWebpackPlugin.options.date %>-->
 
-<!---->
-    <!--publicPath : ""-->
-<!---->
-    <!--chunks : {"main":{"size":1012,"entry":"js/main.bundle.js","hash":"9e090c127f6042531245","css":[]}}-->
-<!---->
-    <!--js : ["js/main.bundle.js"]-->
-<!---->
-    <!--css : []-->
-<!---->
-    <!--manifest : -->
-<!---->
+<!--<% for(var key in htmlWebpackPlugin.files) { %>-->
+    <!--<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>-->
+<!--<% } %>-->
 
 
-<!---->
-<!--template : "I:\\server\\nginx-1.10.1\\html\\webpack-demo\\node_modules\\.2.28.0@html-webpack-plugin\\lib\\loader.js!I:\\server\\nginx-1.10.1\\html\\webpack-demo\\index.html"-->
-<!---->
-<!--filename : "index.html"-->
-<!---->
-<!--hash : false-->
-<!---->
-<!--inject : "body"-->
-<!---->
-<!--compile : true-->
-<!---->
-<!--favicon : false-->
-<!---->
-<!--minify : false-->
-<!---->
-<!--cache : true-->
-<!---->
-<!--showErrors : true-->
-<!---->
-<!--chunks : "all"-->
-<!---->
-<!--excludeChunks : []-->
-<!---->
-<!--title : "Webpack App"-->
-<!---->
-<!--xhtml : false-->
-<!---->
+<!--<% for(var key in htmlWebpackPlugin.options) { %>-->
+<!--<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.options[key]) %>-->
+<!--<% } %>-->
 
 <!--我是注释-->
 <script type="text/javascript" src="js/main.bundle.js"></script></body>
