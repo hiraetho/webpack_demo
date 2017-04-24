@@ -67,6 +67,11 @@ module.exports = {
                     name: 'assets/[name]-[hash:5].[ext]',
                     limit: 10240,
                 }
+            },
+            {
+                test: /\.js$/,
+                exclude: path.resolve(__dirname, 'node_modules'),
+                loader: 'eslint-loader'
             }
         ]
     },
@@ -88,5 +93,5 @@ module.exports = {
             template: 'index.html',
             inject: 'body'
         })
-    ],
+    ]
 }
